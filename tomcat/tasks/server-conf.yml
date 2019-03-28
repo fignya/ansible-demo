@@ -14,9 +14,9 @@
   notify: tomcat restart
   become: True
 
-- name: start tomcat
+- name: restart tomcat
   service:
     name: "{{tomcat_service_name}}"
-    state: started
+    state: restarted
     enabled: yes
   become: True

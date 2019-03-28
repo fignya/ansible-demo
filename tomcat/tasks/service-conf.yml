@@ -5,3 +5,7 @@
       dest: /etc/systemd/system/tomcat.service
     notify: tomcat restart
     become: True
+
+  - name: tomcat restart
+    service: name={{ tomcat_service_name }} state=stopped
+    become: True
