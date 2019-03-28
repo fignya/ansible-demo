@@ -1,0 +1,7 @@
+---
+
+- include:  system-prepare.yml
+- include:  asset-prepare.yml
+- include:  app-prepare.yml
+- include:  service-conf.yml
+- include:  server-conf.yml

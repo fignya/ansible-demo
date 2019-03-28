@@ -1,0 +1,22 @@
+---
+
+- name: create server configuration
+  template:
+    src: server.xml.j2
+    dest: "{{ tomcat_conf_dir }}/server.xml"
+  notify: tomcat restart
+  become: True
+
+- name: create web configuration
+  template:
+    src: web.xml.j2
+    dest: "{{ tomcat_conf_dir }}/web.xml"
+  notify: tomcat restart
+  become: True
+
+- name: start tomcat
+  service:
+    name: "{{tomcat_service_name}}"
+    state: started
+    enabled: yes
+  become: True

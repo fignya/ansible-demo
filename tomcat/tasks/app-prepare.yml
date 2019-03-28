@@ -1,0 +1,14 @@
+---
+
+- name: get app version
+  set_fact:
+    app_url: "{{ lookup('env','APP_URL') }}"
+    app_name: "{{ lookup('env','APP_NAME') }}"
+
+- name: petclinic.war binary download
+  get_url:
+    url: "{{ app_url }}"
+    dest: "{{ tomcat_app_dir }}/{{ app_name }}.war"
+    owner: "{{ tomcat_os_user_name }}"
+    group: "{{ tomcat_os_group_name }}"
+  become: True

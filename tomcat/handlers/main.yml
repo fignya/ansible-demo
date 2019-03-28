@@ -1,0 +1,5 @@
+---
+- name: tomcat restart
+  service: name={{ tomcat_service_name }} state=restarted
+  become: True
+
