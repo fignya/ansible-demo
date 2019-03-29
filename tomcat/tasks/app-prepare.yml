@@ -11,4 +11,3 @@
     dest: "{{ tomcat_app_dir }}/{{ app_name }}.war"
     owner: "{{ tomcat_os_user_name }}"
     group: "{{ tomcat_os_group_name }}"
-  become: True

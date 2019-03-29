@@ -4,12 +4,10 @@
   yum:
     name: java-1.8.0-openjdk
     state: present
-  become: True
 
 - name: tomcat group add
   group:
     name: "{{ tomcat_os_group_name }}"
-  become: True
 
 - name: tomcat user add
   user:
@@ -17,4 +15,3 @@
     group: "{{ tomcat_os_group_name }}"
     home: "{{ tomcat_home_path }}"
     createhome: no
-  become: True

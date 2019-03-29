@@ -1,3 +1,5 @@
 - hosts: all
   roles:
-    - tomcat
+    - {role: 'db', tags: 'db'}
+    - {role: 'tomcat', tags: 'tomcat'}
+  become: True

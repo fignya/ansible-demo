@@ -4,7 +4,6 @@
     get_url:
       url: "{{ tomcat_binary_url }}"
       dest: "{{ tomcat_dest }}{{ tomcat_binary }}"
-    become: True
 
   - name: extract archive
     unarchive:
@@ -13,11 +12,9 @@
       remote_src: yes
       owner: "{{ tomcat_os_user_name }}"
       group: "{{ tomcat_os_group_name }}"
-    become: True
 
   - name: symlink install directory
     file:
       src: "{{ tomcat_dest }}{{ tomcat_target_dir }}"
       path: "{{ tomcat_dest }}{{ tomcat_symlink }}"
       state: link
-    become: True

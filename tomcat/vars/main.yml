@@ -15,5 +15,4 @@ tomcat_symlink:  tomcat-latest
 tomcat_conf_dir:  "{{ tomcat_dest }}{{ tomcat_symlink }}/conf"
 tomcat_app_dir:  "{{ tomcat_dest }}{{ tomcat_symlink }}/webapps"
 
-
 http_port: 8080
