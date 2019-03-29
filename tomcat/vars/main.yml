@@ -16,8 +16,4 @@ tomcat_conf_dir:  "{{ tomcat_dest }}{{ tomcat_symlink }}/conf"
 tomcat_app_dir:  "{{ tomcat_dest }}{{ tomcat_symlink }}/webapps"
 
 
-
-# Tomcat users.xml
-tomcat_jenkins_username:  jenkins
-tomcat_admin_username:
-tomcat_admin_password:
+http_port: 8080

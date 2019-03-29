@@ -20,3 +20,7 @@
     state: restarted
     enabled: yes
   become: True
+
+- name: wait for tomcat to start
+  wait_for:
+    port: "{{http_port}}"
