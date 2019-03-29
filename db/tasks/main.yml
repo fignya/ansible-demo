@@ -3,8 +3,8 @@
 
 - name: get db param
   set_fact:
-    dbuser: "{{ lookup('env','mysql_dbname') }}"
-    dbname: "{{ lookup('env','mysql_username') }}"
+    dbuser: "{{ lookup('env','mysql_username') }}"
+    dbname: "{{ lookup('env','mysql_dbname') }}"
     upassword: "{{ lookup('env','mysql_password') }}"
 
 
