@@ -40,5 +40,5 @@
     name: "{{ dbuser }}"
     password: "{{ upassword }}"
     priv: '*.*:ALL,GRANT'
-    host_all: true
+    host: '%'
     state: "present"
