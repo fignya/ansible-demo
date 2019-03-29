@@ -39,6 +39,6 @@
   mysql_user:
     name: "{{ dbuser }}"
     password: "{{ upassword }}"
-    priv: '{{ dbname }}.*:ALL,GRANT'
+    priv: '*.*:ALL,GRANT'
     host: '%'
     state: "present"
