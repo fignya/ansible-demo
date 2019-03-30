@@ -2,8 +2,8 @@
 
 - name: get app version
   set_fact:
-    app_url: "{{ lookup('env','APP_URL') }}"
-    app_name: "{{ lookup('env','APP_NAME') }}"
+    app_url: "{{ lookup('env','app_url') }}"
+    app_name: "{{ lookup('env','app_name') }}"
 
 - name: petclinic.war binary download
   get_url:
